@@ -1,0 +1,11 @@
+server:
+  port: 5000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: dummy-api
+          uri: https://apingweb.com
+          predicates:
+            - Path=/api/**
